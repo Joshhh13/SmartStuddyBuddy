@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnProgress = new System.Windows.Forms.Button();
             this.btnChat = new System.Windows.Forms.Button();
@@ -86,9 +88,8 @@
             this.btnMyProgress = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnMyProfile = new System.Windows.Forms.Button();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -99,7 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel6.SuspendLayout();
-            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,6 +119,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1458, 113);
             this.panel1.TabIndex = 1;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.White;
+            this.panel16.Controls.Add(this.textBox1);
+            this.panel16.Location = new System.Drawing.Point(330, 49);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(437, 24);
+            this.panel16.TabIndex = 39;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(437, 24);
+            this.textBox1.TabIndex = 14;
+            this.textBox1.Text = "🔍 Search Study....";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnLogout
             // 
@@ -558,6 +577,7 @@
             this.btnAiChat.Text = "Ai Chat";
             this.btnAiChat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAiChat.UseVisualStyleBackColor = false;
+            this.btnAiChat.Click += new System.EventHandler(this.btnAiChat_Click);
             // 
             // btnMatch
             // 
@@ -796,25 +816,6 @@
             this.btnMyProfile.UseVisualStyleBackColor = true;
             this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
             // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.White;
-            this.panel16.Controls.Add(this.textBox1);
-            this.panel16.Location = new System.Drawing.Point(330, 49);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(437, 24);
-            this.panel16.TabIndex = 39;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(437, 24);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.Text = "🔍 Search Study....";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // StudySets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -849,6 +850,8 @@
             this.Load += new System.EventHandler(this.StudySets_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -863,8 +866,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel6.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

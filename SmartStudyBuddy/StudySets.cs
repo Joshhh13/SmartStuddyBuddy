@@ -41,8 +41,9 @@ namespace SmartStudyBuddy
             InitializeQuestions();
             InitializeSpeechRecognition();
             DisplayQuestion();
+            this.questions = new List<StudySets.Question>();
 
-            
+
         }
 
         private void InitializeQuestions()
@@ -523,19 +524,20 @@ namespace SmartStudyBuddy
             this.Hide();
         }
 
-        
-
-
-
+        private void btnAiChat_Click(object sender, EventArgs e)
+        {
+            AiChat ai = new AiChat();
+            ai.Show();
+            this.Hide();
+        }
 
         private void btnFlashCard_Click(object sender, EventArgs e)
-        {
-            // 1. Ang Flash Cards Button (na pinindot mo) ay gagawing BLUE
+        {           
             Button btnFlash = sender as Button;
             if (btnFlash != null)
             {
-                btnFlash.BackColor = Color.DarkBlue; // Blue
-                btnFlash.ForeColor = Color.White;    // White Text
+                btnFlash.BackColor = Color.DarkBlue; 
+                btnFlash.ForeColor = Color.White;    
             }
 
             // 2. Ang Quiz Button ay gagawing GRAY
@@ -560,11 +562,7 @@ namespace SmartStudyBuddy
             {
                 btnMatch.BackColor = Color.LightGray;
                 btnMatch.ForeColor = Color.Black;
-            }
-
-            // (Optional) Kung may form ka pang FlashCards na bubuksan, ilagay mo dito:
-            // FlashCardsForm form = new FlashCardsForm();
-            // form.Show();
+            }          
         }
 
         private void btnChoiceA_Click(object sender, EventArgs e)
@@ -819,6 +817,8 @@ namespace SmartStudyBuddy
             }
             return instance;
         }
+
+        
     }
 }
     

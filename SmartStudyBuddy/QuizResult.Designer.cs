@@ -49,8 +49,8 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label5 = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnChoiceA = new System.Windows.Forms.Button();
             this.btnChoiceD = new System.Windows.Forms.Button();
             this.btnChoiceC = new System.Windows.Forms.Button();
             this.btnChoiceB = new System.Windows.Forms.Button();
@@ -58,23 +58,22 @@
             this.lblProgress = new System.Windows.Forms.Label();
             this.btnReviewPrev = new System.Windows.Forms.Button();
             this.btnReviewNext = new System.Windows.Forms.Button();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.btnQuiz = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.btnAiChat = new System.Windows.Forms.Button();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.btnMatch = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btnFlashCard = new System.Windows.Forms.Button();
-            this.btnChoiceA = new System.Windows.Forms.Button();
+            this.btnQuiz = new System.Windows.Forms.Button();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -318,9 +317,9 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(735, 206);
+            this.progressBar1.Location = new System.Drawing.Point(779, 206);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(336, 14);
+            this.progressBar1.Size = new System.Drawing.Size(441, 14);
             this.progressBar1.TabIndex = 4;
             // 
             // label5
@@ -338,21 +337,11 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.ForeColor = System.Drawing.Color.Gray;
-            this.lblScore.Location = new System.Drawing.Point(996, 190);
+            this.lblScore.Location = new System.Drawing.Point(1145, 190);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(75, 13);
             this.lblScore.TabIndex = 17;
             this.lblScore.Text = "Question 1/24";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1182, 195);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 25);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Score :";
             // 
             // panel3
             // 
@@ -367,6 +356,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(799, 252);
             this.panel3.TabIndex = 19;
+            // 
+            // btnChoiceA
+            // 
+            this.btnChoiceA.Location = new System.Drawing.Point(220, 137);
+            this.btnChoiceA.Name = "btnChoiceA";
+            this.btnChoiceA.Size = new System.Drawing.Size(117, 40);
+            this.btnChoiceA.TabIndex = 24;
+            this.btnChoiceA.Text = "A.";
+            this.btnChoiceA.UseVisualStyleBackColor = true;
             // 
             // btnChoiceD
             // 
@@ -442,29 +440,6 @@
             this.btnReviewNext.UseVisualStyleBackColor = false;
             this.btnReviewNext.Click += new System.EventHandler(this.btnReviewNext_Click);
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox9.Image = global::SmartStudyBuddy.Properties.Resources.brain1;
-            this.pictureBox9.Location = new System.Drawing.Point(681, 711);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(70, 43);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 31;
-            this.pictureBox9.TabStop = false;
-            // 
-            // btnQuiz
-            // 
-            this.btnQuiz.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnQuiz.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuiz.Location = new System.Drawing.Point(654, 699);
-            this.btnQuiz.Name = "btnQuiz";
-            this.btnQuiz.Size = new System.Drawing.Size(125, 95);
-            this.btnQuiz.TabIndex = 30;
-            this.btnQuiz.Text = "Quiz";
-            this.btnQuiz.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnQuiz.UseVisualStyleBackColor = false;
-            // 
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Gainsboro;
@@ -533,33 +508,47 @@
             this.btnFlashCard.Text = "Flash Cards";
             this.btnFlashCard.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnFlashCard.UseVisualStyleBackColor = false;
+            this.btnFlashCard.Click += new System.EventHandler(this.btnFlashCard_Click);
             // 
-            // btnChoiceA
+            // btnQuiz
             // 
-            this.btnChoiceA.Location = new System.Drawing.Point(220, 137);
-            this.btnChoiceA.Name = "btnChoiceA";
-            this.btnChoiceA.Size = new System.Drawing.Size(117, 40);
-            this.btnChoiceA.TabIndex = 24;
-            this.btnChoiceA.Text = "A.";
-            this.btnChoiceA.UseVisualStyleBackColor = true;
+            this.btnQuiz.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnQuiz.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuiz.Location = new System.Drawing.Point(653, 699);
+            this.btnQuiz.Name = "btnQuiz";
+            this.btnQuiz.Size = new System.Drawing.Size(125, 95);
+            this.btnQuiz.TabIndex = 40;
+            this.btnQuiz.Text = "Quiz";
+            this.btnQuiz.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnQuiz.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox9.Image = global::SmartStudyBuddy.Properties.Resources.brain1;
+            this.pictureBox9.Location = new System.Drawing.Point(681, 711);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(70, 43);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 41;
+            this.pictureBox9.TabStop = false;
             // 
             // QuizResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1458, 998);
+            this.Controls.Add(this.pictureBox9);
+            this.Controls.Add(this.btnQuiz);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.btnFlashCard);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.btnMatch);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.btnAiChat);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.btnQuiz);
             this.Controls.Add(this.btnReviewNext);
             this.Controls.Add(this.btnReviewPrev);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.progressBar1);
@@ -575,10 +564,10 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,7 +595,6 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnChoiceD;
         private System.Windows.Forms.Button btnChoiceC;
@@ -615,8 +603,6 @@
         private System.Windows.Forms.Label lblProgress;
         private System.Windows.Forms.Button btnReviewPrev;
         private System.Windows.Forms.Button btnReviewNext;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Button btnQuiz;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Button btnAiChat;
         private System.Windows.Forms.PictureBox pictureBox11;
@@ -625,5 +611,7 @@
         private System.Windows.Forms.Button btnFlashCard;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Button btnChoiceA;
+        private System.Windows.Forms.Button btnQuiz;
+        private System.Windows.Forms.PictureBox pictureBox9;
     }
 }

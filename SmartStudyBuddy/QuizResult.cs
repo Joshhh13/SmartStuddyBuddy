@@ -12,6 +12,9 @@ namespace SmartStudyBuddy
 {
     public partial class QuizResult : Form
     {
+
+
+
         private static QuizResult instance;
 
         private List<StudySets.Question> questions;
@@ -22,7 +25,7 @@ namespace SmartStudyBuddy
         public QuizResult()
         {
             InitializeComponent();
-            this.questions = new List<StudySets.Question>(); 
+            
         }
 
         public QuizResult(List<StudySets.Question> quizQuestions)
@@ -116,8 +119,8 @@ namespace SmartStudyBuddy
                 {
 
                     Text = System.Text.RegularExpressions.Regex.IsMatch(q.Options[i], @"^[A-D]\.\s")
-                                    ? q.Options[i]  
-                                    : $"{letters[i]}. {q.Options[i]}",  
+                                    ? q.Options[i]
+                                    : $"{letters[i]}. {q.Options[i]}",
                     AutoSize = false,
                     Size = new Size(panelWidth - 50, 40),
                     Location = new Point(10, 15),
@@ -129,7 +132,7 @@ namespace SmartStudyBuddy
 
                 if (isUserAnswer && isCorrect)
                 {
-                    
+
                     optPanel.BackColor = Color.LightGreen;
                     Label lblMark = new Label
                     {
@@ -231,7 +234,7 @@ namespace SmartStudyBuddy
      
         private void buttonStudySets_Click(object sender, EventArgs e)
         {
-           StudySets sets = new StudySets();
+            StudySets sets = new StudySets();
             sets.Show();
             this.Hide();
         }
@@ -253,6 +256,18 @@ namespace SmartStudyBuddy
         private void buttonLogout_Click(object sender, EventArgs e)
         {
 
-        }        
+        }
+
+        private void btnFlashCard_Click(object sender, EventArgs e)
+        {
+
+            
+
+            StudySets study = new StudySets();
+            study.Show();
+            this.Hide();
+        }
+        
+
     }
 }

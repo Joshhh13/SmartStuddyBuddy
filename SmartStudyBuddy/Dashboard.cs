@@ -41,11 +41,9 @@ namespace SmartStudyBuddy
             this.AutoScaleMode = AutoScaleMode.None;
             this.PerformLayout();
 
-
             ApplyRoundedCorners();
             SetRoundedPanel(panel3, 30);
             panel3.BackColor = Color.FromArgb(25, 25, 100);
-
 
             panel15.BackColor = Color.MidnightBlue;
             panel15.BorderStyle = BorderStyle.None;
