@@ -245,13 +245,8 @@ namespace SmartStudyBuddy
         {
             try
             {
-                string progressMsg = " Your Learning Progress:\n\n" +
-                                   "✅ Modules Completed: 12/20\n" +
-                                   "⭐ Total Points: 1,450\n" +
-                                   "🏆 Badges Earned: 5\n" +
-                                   "📈 Accuracy Rate: 87%\n\n" +
-                                   "Keep up the great work! 🎉";
-                MessageBox.Show(progressMsg, "My Progress", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ProgressForm progressForm = new ProgressForm();
+                progressForm.Show();
             }
             catch (Exception ex)
             {
