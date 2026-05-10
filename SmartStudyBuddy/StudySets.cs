@@ -818,7 +818,16 @@ namespace SmartStudyBuddy
             return instance;
         }
 
-        
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AiChat aiChat = new AiChat();
+            aiChat.Show();
+        }
     }
 }
     

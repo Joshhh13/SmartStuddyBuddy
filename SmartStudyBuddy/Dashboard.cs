@@ -513,5 +513,17 @@ namespace SmartStudyBuddy
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AiChat aiChat = new AiChat();
+            aiChat.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LeaderBoard lb = new LeaderBoard();
+            lb.Show();
+        }
     }
 }

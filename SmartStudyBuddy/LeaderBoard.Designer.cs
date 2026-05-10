@@ -1,6 +1,6 @@
 ﻿namespace SmartStudyBuddy
 {
-    partial class AiChat
+    partial class LeaderBoard
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -17,8 +17,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 800);
-            this.Name = "AiChat";
-            this.Text = "StudyBuddy - AI Chat";
+            this.Name = "LeaderBoard";
+            this.Text = "SmartStudyBuddy - Leaderboard";
             this.ResumeLayout(false);
         }
     }

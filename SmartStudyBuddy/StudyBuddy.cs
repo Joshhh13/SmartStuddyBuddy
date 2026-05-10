@@ -309,5 +309,10 @@ namespace SmartStudyBuddy
             }
             return instance;
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
